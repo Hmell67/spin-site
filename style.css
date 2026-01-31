@@ -1,37 +1,44 @@
+/* Фон */
 body {
   font-family: 'Arial', sans-serif;
-  background: linear-gradient(135deg, #0f172a, #1e293b);
-  color: #fff;
+  margin: 0;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  margin: 0;
+  background: url('https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+  background-blur: 5px;
+  color: #fff;
   overflow-x: hidden;
+  position: relative;
 }
 
+/* Контейнер */
 .container {
   text-align: center;
-  max-width: 400px;
+  max-width: 500px;
+  z-index: 10;
+  position: relative;
 }
 
+/* Заголовок */
 h1 {
-  font-size: 28px;
-  margin-bottom: 25px;
-  text-shadow: 0 0 10px #facc15;
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 15px #facc15;
 }
 
 /* Колесо рулетки */
 .wheel-wrapper {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   margin: 0 auto 20px auto;
 }
 
 canvas#wheel {
   border-radius: 50%;
-  box-shadow: 0 0 25px rgba(255,255,255,0.3);
+  box-shadow: 0 0 35px rgba(255,255,255,0.5);
   transition: transform 0.1s linear;
 }
 
@@ -40,15 +47,21 @@ canvas#wheel {
   top: -10px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 36px;
-  color: red;
-  text-shadow: 0 0 5px #000;
+  font-size: 48px;
+  color: #f59e0b;
+  text-shadow: 0 0 10px #fff;
+  animation: jump 1s infinite alternate;
+}
+
+@keyframes jump {
+  0% { transform: translateX(-50%) translateY(0); }
+  100% { transform: translateX(-50%) translateY(-10px); }
 }
 
 /* Кнопки */
 button {
-  padding: 14px 24px;
-  font-size: 16px;
+  padding: 16px 28px;
+  font-size: 18px;
   margin-top: 12px;
   cursor: pointer;
   border: none;
@@ -62,27 +75,17 @@ button {
   color: #fff;
 }
 
-#spinBtn:hover {
-  background: linear-gradient(45deg, #16a34a, #22c55e);
-}
-
 #claimBtn, #showPrizesBtn {
   background: linear-gradient(45deg, #facc15, #eab308);
   color: #1e293b;
 }
 
-button:hover {
-  filter: brightness(1.1);
-}
-
 /* Результат */
-.hidden {
-  display: none;
-}
+.hidden { display: none; }
 #result {
   margin-top: 15px;
-  font-size: 18px;
-  text-shadow: 0 0 5px #facc15;
+  font-size: 20px;
+  text-shadow: 0 0 8px #facc15;
 }
 
 /* Модалка */
@@ -110,7 +113,7 @@ button:hover {
 
 .modal-content {
   background: #1e293b;
-  padding: 20px;
+  padding: 25px;
   border-radius: 16px;
   text-align: center;
   position: relative;
@@ -132,9 +135,17 @@ button:hover {
   position: absolute;
   top: 10px;
   right: 16px;
-  font-size: 24px;
+  font-size: 28px;
   cursor: pointer;
 }
 
-/* Скрытие модалки */
-.hidden { display: none; }
+/* Confetti */
+.confetti-canvas {
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
