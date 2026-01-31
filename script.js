@@ -30,6 +30,10 @@ function pickOutcome() {
 
 spinBtn.addEventListener("click", () => {
   if (localStorage.getItem(storageKey)) return;
+  if (navigator.vibrate) {
+  navigator.vibrate([200, 100, 200]);
+}
+
 
   spinBtn.disabled = true;
 
