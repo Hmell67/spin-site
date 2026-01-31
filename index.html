@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🎁 Персональная бонусная акция</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎁 Премиальная бонусная рулетка</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
-  <h1>🎉 Ваша бонусная акция</h1>
+  <h1>🎉 Вращай рулетку и выиграй!</h1>
 
   <div class="wheel-wrapper">
-    <canvas id="wheel" width="300" height="300"></canvas>
+    <canvas id="wheel" width="400" height="400"></canvas>
     <div class="pointer">▼</div>
   </div>
 
@@ -30,12 +30,16 @@
     <span id="closeModal" class="close">&times;</span>
     <h2>🎁 Возможные призы</h2>
     <ul>
-      <li>🎁 Бонус для новых пользователей</li>
-      <li>🔥 Расширенное предложение</li>
-      <li>🏆 Специальная акция</li>
+      <li>🟦 Telegram Premium</li>
+      <li>⭐ Telegram Звезды</li>
+      <li>💵 Фрибет 1000₽</li>
+      <li>🔒 Секретный бонус</li>
+      <li>🎰 50 фриспинов</li>
     </ul>
   </div>
 </div>
+
+<canvas id="confettiCanvas" class="confetti-canvas"></canvas>
 
 <script src="script.js"></script>
 </body>
