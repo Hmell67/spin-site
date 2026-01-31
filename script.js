@@ -1,3 +1,8 @@
+if (localStorage.getItem(storageKey)) {
+  spinBtn.disabled = true;
+  spinBtn.textContent = "Участие завершено";
+}
+
 const spinBtn = document.getElementById("spinBtn");
 const wheel = document.getElementById("wheel");
 const result = document.getElementById("result");
@@ -6,7 +11,8 @@ const claimBtn = document.getElementById("claimBtn");
 const PARTNER_URL = "https://example.com"; // ← ТУТ ПОТОМ ВСТАВИШЬ РЕФКУ
 
 const uid = new URLSearchParams(window.location.search).get("uid") || "guest";
-const storageKey = "spin_done_" + uid;
+const storageKey = "spin_done_" + uid + "_" + navigator.userAgent;
+
 
 if (localStorage.getItem(storageKey)) {
   spinBtn.disabled = true;
