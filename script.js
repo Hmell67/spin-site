@@ -22,9 +22,10 @@ if (localStorage.getItem(storageKey)) {
 
 function pickOutcome() {
   const rand = Math.random() * 100;
-  if (rand < 70) return { text: "🎁 Бонус от партнёра", angle: 60 };
-  if (rand < 95) return { text: "🔥 Расширенное предложение", angle: 180 };
-  return { text: "🏆 Специальная акция", angle: 300 };
+  if (rand < 70) return { text: "🎁 Бонус от партнёра", angle: 75 };
+  if (rand < 95) return { text: "🔥 Расширенное предложение", angle: 195 };
+  return { text: "🏆 Специальная акция", angle: 315 };
+
 }
 
 spinBtn.addEventListener("click", () => {
