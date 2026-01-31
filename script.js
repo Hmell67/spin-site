@@ -89,7 +89,6 @@ spinBtn.addEventListener("click", () => {
   const spins = 5; // количество оборотов
   const finalAngle = spins * 360 + outcome.angle;
 
-  // Вибрация
   if (navigator.vibrate) navigator.vibrate([200,100,200]);
 
   spinWheel(finalAngle);
