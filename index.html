@@ -3,24 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Персональная бонусная акция</title>
+  <title>🎁 Персональная бонусная акция</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
-  <h1>🎁 Персональная бонусная акция</h1>
+  <h1>🎉 Ваша бонусная акция</h1>
 
-  <div class="wheel-container">
-    <div id="wheel" class="wheel"></div>
+  <div class="wheel-wrapper">
+    <canvas id="wheel" width="300" height="300"></canvas>
     <div class="pointer">▼</div>
   </div>
 
-  <button id="spinBtn">Получить бонус</button>
+  <button id="spinBtn">Крутить колесо</button>
 
   <p id="result" class="hidden"></p>
+  <button id="claimBtn" class="hidden">Забрать бонус</button>
+  <button id="showPrizesBtn">Что может выпасть?</button>
+</div>
 
-  <button id="claimBtn" class="hidden">Перейти к акции</button>
+<!-- Модалка для призов -->
+<div id="modal" class="modal hidden">
+  <div class="modal-content">
+    <span id="closeModal" class="close">&times;</span>
+    <h2>🎁 Возможные призы</h2>
+    <ul>
+      <li>🎁 Бонус для новых пользователей</li>
+      <li>🔥 Расширенное предложение</li>
+      <li>🏆 Специальная акция</li>
+    </ul>
+  </div>
 </div>
 
 <script src="script.js"></script>
