@@ -50,3 +50,12 @@ button {
 .hidden {
   display: none;
 }
+
+.labels span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: left center;
+  color: #000;
+  font-size: 14px;
+}
