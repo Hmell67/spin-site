@@ -1,22 +1,30 @@
+/* Базовые стили */
 body {
-  font-family: Arial, sans-serif;
-  background: #0f172a;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin: 0;
 }
 
 .container {
   text-align: center;
 }
 
+h1 {
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+/* Рулетка */
 .wheel-container {
   position: relative;
   width: 260px;
   height: 260px;
-  margin: 20px auto;
+  margin: 0 auto 20px auto;
 }
 
 .wheel {
@@ -29,6 +37,7 @@ body {
     #facc15 240deg 360deg
   );
   transition: transform 6s cubic-bezier(0.33, 1, 0.68, 1);
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
 
 .pointer {
@@ -36,26 +45,29 @@ body {
   top: -10px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 24px;
+  font-size: 30px;
   color: red;
+  text-shadow: 0 0 5px #000;
 }
 
+/* Кнопки */
 button {
-  padding: 12px 20px;
+  padding: 14px 24px;
   font-size: 16px;
   margin-top: 15px;
   cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background-color: #facc15;
+  color: #1e293b;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #fde68a;
 }
 
 .hidden {
   display: none;
-}
-
-.labels span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform-origin: left center;
-  color: #000;
-  font-size: 14px;
 }
